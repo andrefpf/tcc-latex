@@ -7,17 +7,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ
 
 RUN apt-get update
 
-# # Install utilities
-# RUN apt-get install -y \
-#         wget \
-#         make \
-#         cmake \
-#         git
-
-# # Install compiler stuff
-# RUN apt-get install -y \
-#         g++ \
-#         libx11-*
+# Install utilities
+RUN apt-get install -y make
 
 # Install latex stuff
 RUN apt-get install -y \
