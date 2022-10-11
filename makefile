@@ -6,8 +6,8 @@ FLAGS = -quiet -bibtex -shell-escape -pdf -outdir=$(OUTDIR)
 .FORCE:
 
 %.tex: .FORCE
-	latexmk $(FLAGS) $@
-	latexmk -c -quiet -outdir=$(OUTDIR) $@
+	cd $(COMMONDIR) && latexmk $(FLAGS) $(WORKDIR)/$@
+	cd $(COMMONDIR) && latexmk -c -quiet -outdir=$(OUTDIR) $(WORKDIR)/$@
 	rm $(OUTDIR)/*.64 $(OUTDIR)/*.bbl
 
 clean:
