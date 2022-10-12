@@ -13,11 +13,11 @@ RUN apt-get install -y make
 # Install latex stuff
 RUN apt-get install -y \
         latexmk \
+        python3-pygments \
         texlive-lang-portuguese \
         texlive-latex-extra \
         texlive-publishers \
         texlive-fonts-recommended
-
 
 VOLUME /code
 WORKDIR /code

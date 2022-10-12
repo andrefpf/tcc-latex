@@ -1,0 +1,50 @@
+% !TEX jobname = proposta-tcc-andre
+% !TEX options=--shell-escape
+% !TEX output_directory = ./.temp/
+
+\documentclass[embeddedlogo]{ufsc-thesis-rn46-2019}
+
+\usepackage[T1]{fontenc} % fontes
+\usepackage[utf8]{inputenc} % UTF-8
+\usepackage{lipsum} % Gerador de texto
+\usepackage{pdfpages} % Inclui PDF externo (ficha catalográfica)
+
+% Usado para mostrar código
+\usepackage{minted}
+\newmintinline[mt]{latex}{fontsize=\normalsize}
+\newmintinline[mft]{latex}{fontsize=\footnotesize}
+\setminted{fontsize=\tiny,linenos,xleftmargin=2em}
+\setmintedinline{breaklines,breakbytokenanywhere}
+
+
+\titulo[]{Teste título jpeg pleno lightfields 123}
+
+\autor{André Filipe da Silva Fernandes}
+\data{\today}
+\instituicao{Universidade Federal de Santa Catarina}
+\centro{Centro Tecnológico}
+\local{Florianópolis}
+\tcc
+\departamento{Departamento de Informática e Estatística}
+\curso{Ciência da Computação}
+\titulode{Bacharel em Ciência da Computação}
+
+\orientador{Prof. Ismael Seidel, Dr.}
+\coorientador{Prof. José Luís A. Güntzel (?), Dr.}
+\membrabanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal de Santa Catarina}
+\membrobanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal de Santa Catarina}
+\membrobanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal da Terra de Ninguém}
+\coordenador{Prof. Lorem Ipsum, Dr}
+
+
+\begin{document}
+
+\input{content/pre_textuais}
+
+\textual%
+
+\input{content/intro}
+
+\input{content/pos_textuais}
+
+\end{document}
