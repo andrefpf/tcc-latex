@@ -1,0 +1,16 @@
+\begin{resumo}[Resumo]
+    Em algoritmos de compressão de dados com perdas existe uma necessidade natural de balanceamento da taxa de compressão com a taxa de distorção,
+    pois taxas de compressão muito elevadas produzem arquivos de má qualidade, enquanto taxas de compressão muito baixas proporcionam arquivos de
+    tamanhos impraticáveis.
+    A parte 2 do padrão JPEG Pleno, que é dedicada à codificação de lightfields, possui um modo de transformadas 4D que utiliza um multiplicador
+    Lagrangiano para realizar este balanceamento \cite{4d_codec}. O problema de se utilizar o multiplicador Lagrangiano para este fim é a dificuldade em estimar
+    o tamanho dos dados de saída, e portanto escolher os parâmetros de maneira adequada. Este trabalho propõe um algoritmo capaz de otimizar a
+    taxa de distorção baseando-se em uma taxa alvo de bits por píxel, e a implementação deste algoritmo na parte 2 do software de referência do
+    padrão JPEG Pleno para o modo de transformadas 4D.
+
+    % Aqui deve ser inserido um resumo de 150 a 500 palavras (limitação de tamanho dada pela BU). A linguagem deve ser português e a hifenização já foi alterada. O resumo em português deve preceder o resumo em inglês, mesmo que o trabalho seja escrito em inglês. A BU também diz que deve ser usada a voz ativa e o discurso deve ser na 3ª pessoa. A estrutura do resumo pode ser similar a estrutura usada em artigos: Contexto -- Problema -- Estado da arte -- Solução proposta  -- Resultados.
+
+    % Atenção! a BU exige separação através de ponto (.). Ela recomanda de 3 a 5 keywords
+    \vspace{\baselineskip} 
+    \textbf{Palavras-chave:} Lightfields. JPEG Pleno. Compressão de dados.
+\end{resumo}
