@@ -12,34 +12,34 @@
     que codificam cada ponto da imagem como uma quádrupla de coeficientes $(u, v, s, t)$ \cite{4d_codec}, representando respectivamente as coordenadas horizontais, 
     verticais, ângulo de incidência perpendicular ao eixo horizontal e ângulo de incidência perpendicular ao eixo vertical. Neste contexto foi criado
     o grupo JPEG Pleno com a intenção de estabelecer padrões para codificação e representação de light fields e de outras imagens plenopticas, como
-    point clouds e hologramas. Até o momento o padrão inclui dois modos para codificar light fields: 4D-Transform mode, que é baseado na transformada
+    \textit{point clouds} e hologramas. Até o momento o padrão inclui dois modos para codificar light fields: 4D-Transform mode, que é baseado na transformada
     discreta de cosseno em 4 dimensões - \textit{4 dimensional discrete cossine transform} (4D-DCT); e 4D-Prediction mode que é um modelo preditivo, 
     capaz de gerar estágios intermediários de partes da imagem baseado no seu contexto.
 
     O modo de transformada 4D, no qual este trabalho se concentra, particiona a imagem em blocos quadridimensionais não sobrepostos,
     limitados por um tamanho máximo configurável. Com estes blocos criados, é possível dividí-los recursivamente em até 16 blocos menores, seguindo algum
     critério de taxa de distorção (preferencialmente concentrando mais blocos em partes mais detalhadas da imagem) de forma que o custo Lagrangiano seja
-    minimizado, conforme definido na equação \ref{eqn:lagrangian_cost}. A forma como estes blocos foram divididos é modelada como uma hexadecatree e
+    minimizado, conforme definido na equação \ref{eqn:lagrangian_cost}, onde J é o custo Lagrangiano, D é o quadrado do erro em relação ao original e
+    R é a taxa de codificação. A forma como estes blocos foram divididos é modelada como uma \textit{hexadecatree} e
     codificada em um bitplane, para possibilitar a reconstrução posterior da imagem, visto que eles passarão por uma 4D-DCT \cite{4d_codec}.
+    
+    \begin{equation}
+        \label{eqn:lagrangian_cost}
+        J = D + \lambda R
+    \end{equation}
 
     O problema da taxa alvo, neste contexto, é a necessidade de fazer com que os dados de saída possuam um tamanho próximo a uma taxa préviamente
-    especificada. Ter este controle do tamanho dos dados após comprimidos é uma característica útil para codecs, especialmente se utilizados em
-    aplicações de streaming, por exemplo, onde é necessário controlar precisamente a vazão dos dados de acordo com a capacidade da rede. A utilização
+    especificada. Ter este controle do tamanho dos dados após comprimidos é uma característica útil para \textit{codecs}, especialmente se utilizados em
+    aplicações de \textit{streaming}, por exemplo, onde é necessário controlar precisamente a vazão dos dados de acordo com a capacidade da rede. A utilização
     de um custo Lagrangiano para o particionamento dos blocos torna difícil a tarefa de estimar a taxa alvo através dos parâmetros de entrada, por isso
     o presente trabalho resolve este problema modificando o algoritmo de particionamento para que ele se limite a um tamanho fixo de saída que será 
     passado como parâmetro de entrada, dispensando o uso do operador Lagrangiano e facilitando a operação do codec para usuários ou outras aplicações.
-
-\begin{equation}
-    \label{eqn:lagrangian_cost}
-    J = D + \lambda R
-\end{equation}
 
 
 % Seções
 \input{content/introducao/objetivos}
 \input{content/introducao/metodos}
 \input{content/introducao/cronograma}
-\input{content/introducao/custos}
 \input{content/introducao/recursos_humanos}
 \input{content/introducao/comunicacao}
 \input{content/introducao/riscos}

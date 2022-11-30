@@ -10,14 +10,16 @@
 \usepackage{pdfpages} % Inclui PDF externo (ficha catalográfica)
 \usepackage{xcolor, colortbl, multirow} % Gerar tabelas
 \usepackage{minted} % Usado para mostrar código
+\usepackage{cco-ufsc-tcc-tables}
 
+\definecolor{shadecolor}{HTML}{C0C0C0}
 \newmintinline[mt]{latex}{fontsize=\normalsize}
 \newmintinline[mft]{latex}{fontsize=\footnotesize}
 \setminted{fontsize=\tiny,linenos,xleftmargin=2em}
 \setmintedinline{breaklines,breakbytokenanywhere}
 
 % 
-\titulo[]{Solução para o problema da taxa alvo durante a codificação de light fields}
+\titulo[]{Método para Controle de Taxa Alvo na Compressão de Light Fields Seguindo o Padrão JPEG Pleno Parte 2 - 4DTM}
 \autor{André Filipe da Silva Fernandes}
 \data{\today}
 \instituicao{Universidade Federal de Santa Catarina}
@@ -28,8 +30,11 @@
 \curso{Ciência da Computação}
 \titulode{Bacharel em Ciência da Computação}
 
+\instituicaoResponsavelConcordancia{ECL/INE/CTC}
+\foneResponsavelConcordancia{37217511}
+\areaDeConcentracao{\textit{Hardware}}
+
 \orientador{Prof. Ismael Seidel, Dr.}
-\coorientador{Prof. José Luís A. Güntzel (?), Dr.}
 \membrabanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal da Terra de Ninguém}
 \membrobanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal da Terra de Ninguém}
 \membrobanca{Prof. Lorem Ipsum, Dr.}{Universidade Federal da Terra de Ninguém}
@@ -47,5 +52,6 @@
 % 
 
 \input{content/pos_textuais}
-
+\anexos
+\imprimirdeclaracaodeconcordanciatcc{}
 \end{document}

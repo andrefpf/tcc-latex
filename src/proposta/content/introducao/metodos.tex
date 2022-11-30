@@ -1,7 +1,8 @@
 \section{Método de Pesquisa}
     No início do projeto será feito o estudo da base de código do software de referência do JPEG Pleno, bem como a leitura de trabalhos correlatos ao
     tema proposto, visando conhecer técnicas empregadas especialmente em codecs de imagem e vídeo e que podem ser utilizadas no desenvolvimento deste 
-    trabalho. A partir do conhecimento adquirido através deste estudo, o algoritmo será desenvolvido a partir do software de referência, utilizando a 
-    linguagem c++. Assim que o algoritmo estiver funcional serão feitas as comparações de qualidade e desempenho com o modelo original, utilizando os 
-    lightfields fornecidos pelo dataset de light fields do JPEG Pleno com parâmetros variados. As comparações de qualidade serão feitas através da 
-    Relação Sinal-Ruído de Pico - \textit{Peak signal to noise ratio} (PSNR), enquanto o desempenho será medido em tempo de execução.
+    trabalho. A partir do conhecimento adquirido através deste estudo, o algoritmo proposto será implementado no software de referência do JPEG Pleno
+    (JPLM) \footnote{Disponível publicamente em: \url{https://gitlab.com/wg1/jpeg-pleno-refsw}.}. A linguagem utilizada será C++17. Assim que o algoritmo 
+    estiver funcional serão feitas as comparações de qualidade e desempenho com o modelo original, conforme estabelecido pelas Common Test Conditions (CTC)
+    definidas para o padrão. As comparações de qualidade serão feitas através da Relação Sinal-Ruído de Pico - \textit{Peak signal to noise ratio} (PSNR),
+    o desempenho será medido em tempo de execução e a eficiência da codificação através de curvas de \textit{Rate Distortion} (RD).
